@@ -4,6 +4,7 @@ import time
 import mytime
 import fgourl
 from user import user
+import stamina_apple
 
 userIds = os.environ['userIds'].split(',')
 authKeys = os.environ['authKeys'].split(',')
@@ -38,6 +39,17 @@ def main():
                 time.sleep(2)
                 instance.topHome()
                 time.sleep(2)
+                # 调用我的函数，计算当前体力值和青苹果储存
+                # 这里我假设你的初始体力值是100，开始时间是当前时间，初始青苹果储存是0
+                # 你可以根据你的实际情况修改这些参数
+                stamina, apple = stamina_apple.calculate_stamina_and_apple(100, time.time(), 0)
+                # 打印或者发送我的函数的结果
+                print(f'当前体力值：{stamina}')
+                print(f'青苹果储存：{apple}')
+                res += f'当前体力值：{stamina}\n'
+                res += f'青苹果储存：{apple}\n'
+            except Exception as ex:
+                print(f'{i}th user login failed: {ex}')
             except Exception as ex:
                 print(f'{i}th user login failed: {ex}')
                 traceback.print_exc()
