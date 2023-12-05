@@ -33,6 +33,7 @@ jobs:
         pip install PIL
         pip install numpy
         pip install pywin32
+        pip install Pillow
     - name: Test
       run: |
         python3 main.py
