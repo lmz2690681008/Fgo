@@ -4,7 +4,7 @@ import time
 import mytime
 import fgourl
 from user import user
-import stamina_apple
+# import stamina_apple
 
 userIds = os.environ['userIds'].split(',')
 authKeys = os.environ['authKeys'].split(',')
