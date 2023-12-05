@@ -39,6 +39,7 @@ def main():
                 time.sleep(2)
                 instance.topHome()
                 time.sleep(2)
+                '''
                 # 调用我的函数，计算当前体力值和青苹果储存
                 # 这里我假设你的初始体力值是100，开始时间是当前时间，初始青苹果储存是0
                 # 你可以根据你的实际情况修改这些参数
@@ -47,7 +48,7 @@ def main():
                 print(f'当前体力值：{stamina}')
                 print(f'青苹果储存：{apple}')
                 res += f'当前体力值：{stamina}\n'
-                res += f'青苹果储存：{apple}\n'
+                res += f'青苹果储存：{apple}\n'   '''
             except Exception as ex:
                 print(f'{i}th user login failed: {ex}')
             except Exception as ex:
